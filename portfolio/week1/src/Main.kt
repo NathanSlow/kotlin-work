@@ -10,9 +10,10 @@ fun main(args: Array<String>) {
         val b = args[1].toDouble()
         val c = args[2].toDouble()
         val semiPerim = 0.5 * (a + b + c)
-        val Area = sqrt(semiPerim * (semiPerim-a) * (semiPerim-b) * (semiPerim-c))
-        println(Area.toString())
+        val Area: Double = sqrt(semiPerim * (semiPerim-a) * (semiPerim-b) * (semiPerim-c))
+        println("Area = ${String.format("%.5f", Area)}")
     } else {
-        println("Too many or too few arguments entered.")
+        println("Error: values for a, b, c required on command line")
+        exitProcess(1)
     }
 }
