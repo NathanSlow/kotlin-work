@@ -17,4 +17,23 @@ class MedianTest : FreeSpec({
     }
 
     // Write four more tests here
+    "Test when odd size" {
+        median(listOf(1f, 2f, 3f)) shouldBe 2f
+        //assertEquals(expected, result)
+        
+    }
+    
+    "Test when even size" {
+        median(listOf(1f, 2f, 2f, 3f)) shouldBe 2f
+    }
+    
+    "Test when single element given" {
+
+        median(listOf(1f)) shouldBe 1f
+    }
+    
+    "Test negative numbers" {
+        median(listOf(-1f, -2f, 3f, -4f, 5f)) shouldBe -1f
+    }
+    
 })
